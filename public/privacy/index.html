@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — CLAW</title>
+  <meta name="description" content="CLAW privacy policy. How we collect, use, and protect your data.">
+  <link rel="canonical" href="https://clawai.app/privacy">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050505;
+      --ink: #f2ede6;
+      --accent: #e8ff47;
+      --muted: #555;
+      --border: #1a1a1a;
+      --card: #0e0e0e;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    /* NAV */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 9990;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 40px;
+      background: rgba(5,5,5,0.90);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .nav-logo span { color: var(--accent); }
+    .btn-primary {
+      background: var(--accent);
+      color: #000;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 9px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+    }
+
+    /* LAYOUT */
+    .page-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 140px 40px 100px;
+    }
+
+    /* HEADER */
+    .page-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      margin-bottom: 12px;
+    }
+    .effective-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 60px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* CONTENT */
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--ink);
+      margin: 52px 0 14px;
+    }
+    h2::before {
+      content: '//';
+      color: var(--accent);
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      margin-right: 10px;
+      font-weight: 400;
+    }
+    p { margin-bottom: 18px; color: #c8c3bc; }
+    ul {
+      margin: 0 0 18px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    ul li {
+      color: #c8c3bc;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 12px;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .callout {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 20px 24px;
+      margin: 32px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .callout p { margin: 0; font-size: 15px; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: var(--muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--ink); }
+
+    @media (max-width: 768px) {
+      #nav { padding: 14px 20px; }
+      .page-wrap { padding: 110px 24px 80px; }
+      footer { flex-direction: column; text-align: center; padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="/" class="nav-logo">CLAW<span>.</span></a>
+  <a href="/app" class="btn-primary">Try Free →</a>
+</nav>
+
+<main class="page-wrap">
+  <div class="page-label">Legal</div>
+  <h1>Privacy Policy</h1>
+  <p class="effective-date">Effective date: March 1, 2026 &nbsp;·&nbsp; Last updated: March 2026</p>
+
+  <div class="callout">
+    <p>The short version: We collect the minimum data needed to run CLAW. We don't sell your data. We don't share it with advertisers. Your conversations are used to generate responses and nothing else.</p>
+  </div>
+
+  <h2>Who We Are</h2>
+  <p>CLAW is an AI assistant operated by EBSS Web Studio ("we," "us," or "our"), based in Las Vegas, Nevada, United States. You can reach us at <a href="mailto:support@clawai.app">support@clawai.app</a>.</p>
+
+  <h2>Information We Collect</h2>
+  <p>We collect only what is necessary to provide the service:</p>
+  <ul>
+    <li><strong>Email address</strong> — if you choose to save your chat history or create an account</li>
+    <li><strong>Conversation content</strong> — your messages and any files you upload, used solely to generate AI responses during your session</li>
+    <li><strong>Usage data</strong> — anonymous counts of how many queries you've made, stored locally in your browser</li>
+    <li><strong>Payment information</strong> — if you subscribe to CLAW Pro, payments are processed by Stripe. We never see or store your card details</li>
+    <li><strong>Technical data</strong> — standard server logs including IP address, browser type, and pages visited</li>
+  </ul>
+
+  <h2>How We Use Your Information</h2>
+  <ul>
+    <li>To provide and improve the CLAW service</li>
+    <li>To process payments and manage your subscription</li>
+    <li>To send transactional emails (receipts, password resets) if you have an account</li>
+    <li>To diagnose technical issues and monitor service health</li>
+  </ul>
+  <p>We do not use your conversations to train AI models. We do not sell your data to any third party.</p>
+
+  <h2>AI Processing</h2>
+  <p>CLAW uses Claude AI, developed by Anthropic, to generate responses. Your messages are sent to Anthropic's API to produce replies. Anthropic's own privacy policy governs how they handle API data. You can review it at <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">anthropic.com/privacy</a>.</p>
+  <p>We do not retain conversation content after your session ends, unless you have opted in to chat history saving.</p>
+
+  <h2>Cookies & Local Storage</h2>
+  <p>CLAW uses browser local storage (not cookies) to remember your free usage count and preferences. No tracking cookies, no advertising pixels, no third-party analytics scripts are loaded by default.</p>
+
+  <h2>Data Sharing</h2>
+  <p>We share data with the following third parties only as needed to operate CLAW:</p>
+  <ul>
+    <li><strong>Anthropic</strong> — AI response generation</li>
+    <li><strong>Stripe</strong> — payment processing for Pro subscriptions</li>
+    <li><strong>Netlify</strong> — website hosting and delivery</li>
+    <li><strong>Railway</strong> — backend infrastructure</li>
+  </ul>
+  <p>No data is sold, rented, or shared with advertisers, data brokers, or any other party.</p>
+
+  <h2>Data Retention</h2>
+  <p>If you have an account, we retain your email address and subscription status for as long as your account is active. You may request deletion at any time by emailing <a href="mailto:support@clawai.app">support@clawai.app</a>. We will delete your data within 30 days of a verified request.</p>
+
+  <h2>Your Rights</h2>
+  <p>Depending on where you live, you may have the right to:</p>
+  <ul>
+    <li>Access the personal data we hold about you</li>
+    <li>Request correction of inaccurate data</li>
+    <li>Request deletion of your data</li>
+    <li>Opt out of any marketing communications</li>
+    <li>Data portability — receive a copy of your data in a common format</li>
+  </ul>
+  <p>To exercise any of these rights, contact us at <a href="mailto:support@clawai.app">support@clawai.app</a>.</p>
+
+  <h2>Children's Privacy</h2>
+  <p>CLAW is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, contact us and we will delete it promptly.</p>
+
+  <h2>Security</h2>
+  <p>We use HTTPS encryption for all data in transit. Payment data is handled exclusively by Stripe and never touches our servers. We apply industry-standard practices to protect data at rest.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>We may update this policy from time to time. When we do, we'll update the "Last updated" date at the top. Continued use of CLAW after changes constitutes acceptance of the updated policy.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy? Email us at <a href="mailto:support@clawai.app">support@clawai.app</a>. We aim to respond within 2 business days.</p>
+</main>
+
+<footer>
+  <div>
+    <strong style="font-family:'Syne',sans-serif; color: var(--accent);">CLAW</strong>
+    <span style="margin-left: 12px;">© 2026 CLAW. All rights reserved.</span>
+    <span style="margin-left: 16px; font-size: 10px; color: #333; letter-spacing: 0.5px;">Powered by Claude AI</span>
+  </div>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="/blog">Blog</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="mailto:support@clawai.app">Support</a>
+    <a href="https://t.me/clawaibot" target="_blank" rel="noopener">Telegram</a>
+  </nav>
+</footer>
+
+</body>
+</html>

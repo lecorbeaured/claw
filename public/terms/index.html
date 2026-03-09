@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — CLAW</title>
+  <meta name="description" content="CLAW terms of service. Rules for using the CLAW AI assistant.">
+  <link rel="canonical" href="https://clawai.app/terms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050505;
+      --ink: #f2ede6;
+      --accent: #e8ff47;
+      --muted: #555;
+      --border: #1a1a1a;
+      --card: #0e0e0e;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 9990;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 40px;
+      background: rgba(5,5,5,0.90);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .nav-logo span { color: var(--accent); }
+    .btn-primary {
+      background: var(--accent);
+      color: #000;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 9px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+    }
+
+    .page-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 140px 40px 100px;
+    }
+    .page-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      margin-bottom: 12px;
+    }
+    .effective-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 60px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--ink);
+      margin: 52px 0 14px;
+    }
+    h2::before {
+      content: '//';
+      color: var(--accent);
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      margin-right: 10px;
+      font-weight: 400;
+    }
+    p { margin-bottom: 18px; color: #c8c3bc; }
+    ul {
+      margin: 0 0 18px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    ul li {
+      color: #c8c3bc;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 12px;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .callout {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 20px 24px;
+      margin: 32px 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .callout p { margin: 0; font-size: 15px; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: var(--muted); text-decoration: none; }
+    .footer-links a:hover { color: var(--ink); }
+
+    @media (max-width: 768px) {
+      #nav { padding: 14px 20px; }
+      .page-wrap { padding: 110px 24px 80px; }
+      footer { flex-direction: column; text-align: center; padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="/" class="nav-logo">CLAW<span>.</span></a>
+  <a href="/app" class="btn-primary">Try Free →</a>
+</nav>
+
+<main class="page-wrap">
+  <div class="page-label">Legal</div>
+  <h1>Terms of Service</h1>
+  <p class="effective-date">Effective date: March 1, 2026 &nbsp;·&nbsp; Last updated: March 2026</p>
+
+  <div class="callout">
+    <p>By using CLAW, you agree to these terms. Please read them. They're written in plain English, not legalese.</p>
+  </div>
+
+  <h2>1. Who You're Agreeing With</h2>
+  <p>These Terms of Service ("Terms") are a legal agreement between you and EBSS Web Studio ("we," "us," or "our"), the operator of CLAW. By accessing or using CLAW at any of our domains or apps, you agree to be bound by these Terms.</p>
+  <p>If you do not agree, do not use CLAW.</p>
+
+  <h2>2. What CLAW Is</h2>
+  <p>CLAW is an AI-powered assistant for chat, research, document analysis, and image understanding. It is powered by third-party AI technology. CLAW is provided as a convenience tool — it is not a substitute for professional legal, financial, medical, or other expert advice.</p>
+
+  <h2>3. Your Account</h2>
+  <p>You may use CLAW with 10 free uses and no account required. If you create an account or subscribe to CLAW Pro, you are responsible for:</p>
+  <ul>
+    <li>Keeping your login credentials secure</li>
+    <li>All activity that occurs under your account</li>
+    <li>Providing accurate information when signing up</li>
+  </ul>
+  <p>You must be at least 13 years old to use CLAW. If you are under 18, you must have parental or guardian consent.</p>
+
+  <h2>4. Acceptable Use</h2>
+  <p>You agree not to use CLAW to:</p>
+  <ul>
+    <li>Generate, distribute, or store illegal content of any kind</li>
+    <li>Harass, threaten, or harm any person</li>
+    <li>Produce spam, phishing content, or deceptive material</li>
+    <li>Attempt to reverse engineer, scrape, or overload our systems</li>
+    <li>Circumvent usage limits through automation or other means</li>
+    <li>Violate any applicable law or regulation</li>
+    <li>Infringe on the intellectual property rights of others</li>
+  </ul>
+  <p>We reserve the right to suspend or terminate accounts that violate these rules without notice or refund.</p>
+
+  <h2>5. Subscriptions & Payments</h2>
+  <p>CLAW Pro is available as a monthly ($17/month) or annual ($149/year) subscription, billed through Stripe.</p>
+  <ul>
+    <li>Subscriptions renew automatically unless cancelled before the renewal date</li>
+    <li>You can cancel at any time from your account settings — your access continues until the end of the billing period</li>
+    <li>We do not offer refunds for partial billing periods, except where required by law</li>
+    <li>We reserve the right to change pricing with 30 days' notice to active subscribers</li>
+  </ul>
+
+  <h2>6. Refund Policy</h2>
+  <p>If you are unsatisfied within the first 7 days of a new paid subscription, contact us at <a href="mailto:support@clawai.app">support@clawai.app</a> and we will issue a full refund, no questions asked. After 7 days, no refunds are issued except where required by applicable law.</p>
+
+  <h2>7. AI-Generated Content</h2>
+  <p>CLAW uses AI to generate responses. You acknowledge that:</p>
+  <ul>
+    <li>AI responses may contain errors, inaccuracies, or outdated information</li>
+    <li>You are solely responsible for how you use or act on AI-generated content</li>
+    <li>CLAW is not a substitute for professional advice in any domain</li>
+    <li>We make no guarantees about the accuracy, completeness, or fitness of any AI output</li>
+  </ul>
+
+  <h2>8. Your Content</h2>
+  <p>You retain ownership of any content you upload or input into CLAW. By using CLAW, you grant us a limited, non-exclusive license to process your content solely for the purpose of generating AI responses.</p>
+  <p>We do not claim ownership of your content and do not use it to train AI models.</p>
+
+  <h2>9. Intellectual Property</h2>
+  <p>CLAW, its logo, design, and underlying software are owned by EBSS Web Studio and protected by applicable intellectual property laws. You may not copy, reproduce, or create derivative works from CLAW without our written permission.</p>
+
+  <h2>10. Disclaimer of Warranties</h2>
+  <p>CLAW is provided "as is" and "as available" without warranties of any kind, express or implied. We do not warrant that the service will be uninterrupted, error-free, or that any particular result will be achieved from using it.</p>
+
+  <h2>11. Limitation of Liability</h2>
+  <p>To the maximum extent permitted by law, EBSS Web Studio shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of CLAW, even if we have been advised of the possibility of such damages. Our total liability to you for any claim shall not exceed the amount you paid us in the 12 months preceding the claim.</p>
+
+  <h2>12. Changes to These Terms</h2>
+  <p>We may update these Terms from time to time. We'll notify active subscribers of material changes by email. Continued use of CLAW after changes take effect constitutes your acceptance of the new Terms.</p>
+
+  <h2>13. Governing Law</h2>
+  <p>These Terms are governed by the laws of the State of Nevada, United States, without regard to conflict of law principles. Any disputes shall be resolved in the courts of Clark County, Nevada.</p>
+
+  <h2>14. Contact</h2>
+  <p>Questions about these Terms? Email us at <a href="mailto:support@clawai.app">support@clawai.app</a>. We aim to respond within 2 business days.</p>
+</main>
+
+<footer>
+  <div>
+    <strong style="font-family:'Syne',sans-serif; color: var(--accent);">CLAW</strong>
+    <span style="margin-left: 12px;">© 2026 CLAW. All rights reserved.</span>
+    <span style="margin-left: 16px; font-size: 10px; color: #333; letter-spacing: 0.5px;">Powered by Claude AI</span>
+  </div>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="/blog">Blog</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="mailto:support@clawai.app">Support</a>
+    <a href="https://t.me/clawaibot" target="_blank" rel="noopener">Telegram</a>
+  </nav>
+</footer>
+
+</body>
+</html>
