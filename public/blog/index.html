@@ -3,53 +3,369 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CLAW Blog — AI Tips, Research & Productivity</title>
-  <meta name="description" content="The CLAW blog. Practical AI tips, tool comparisons, and guides for getting more done with AI.">
-  <link rel="canonical" href="https://clawai.app/blog">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <title>CLAW AI Blog — AI Tips, Guides & Updates</title>
+  <meta name="description" content="The CLAW AI blog covers AI productivity tips, tutorials, product updates, and comparisons to help you get more done with AI tools.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://clawai.app/blog/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clawai.app/blog/">
+  <meta property="og:title" content="CLAW AI Blog — AI Tips, Guides & Updates">
+  <meta property="og:description" content="AI productivity tips, tutorials, and product updates from the CLAW AI team.">
+  <meta property="og:image" content="https://clawai.app/og-image.png">
+  <meta property="og:site_name" content="CLAW AI">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CLAW AI Blog">
+  <meta name="twitter:description" content="AI tips, guides, and product updates from CLAW AI.">
+  <meta name="twitter:image" content="https://clawai.app/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "CLAW AI Blog",
+    "url": "https://clawai.app/blog/",
+    "description": "AI productivity tips, tutorials, and product updates from the CLAW AI team.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CLAW AI",
+      "url": "https://clawai.app",
+      "logo": { "@type": "ImageObject", "url": "https://clawai.app/logo.png" }
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://clawai.app" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://clawai.app/blog/" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
   <style>
-    :root{--bg:#050505;--ink:#f2ede6;--accent:#e8ff47;--muted:#888;--border:#1a1a1a;--card:#0e0e0e}
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    body{background:var(--bg);color:var(--ink);font-family:Georgia,serif;font-size:17px;line-height:1.7}
-    header{background:rgba(5,5,5,.95);border-bottom:1px solid var(--border);padding:18px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:99}
-    .logo{font-family:Arial Black,sans-serif;font-weight:900;font-size:18px;color:var(--ink);text-decoration:none}
-    .logo span{color:var(--accent)}
-    .cta-btn{background:var(--accent);color:#000;font-weight:700;font-size:13px;padding:9px 20px;border-radius:4px;text-decoration:none}
-    main{max-width:860px;margin:0 auto;padding:80px 24px 100px}
-    .blog-header{margin-bottom:60px;padding-bottom:40px;border-bottom:1px solid var(--border)}
-    .label{font-family:monospace;font-size:11px;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:12px}
-    .blog-header h1{font-family:Arial Black,sans-serif;font-size:clamp(32px,5vw,52px);font-weight:900;letter-spacing:-1.5px;line-height:1.05}
-    .blog-header p{color:var(--muted);margin-top:12px;font-size:16px}
-    .posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px}
-    .post-card a{display:block;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:32px;text-decoration:none;transition:border-color .2s}
-    .post-card a:hover{border-color:var(--accent)}
-    .post-date{font-family:monospace;font-size:11px;color:var(--muted);letter-spacing:1px;margin-bottom:12px}
-    .post-card h2{font-family:Arial Black,sans-serif;font-size:19px;font-weight:900;line-height:1.2;letter-spacing:-0.3px;color:var(--ink);margin-bottom:10px}
-    .post-card p{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:16px}
-    .read-more{font-family:monospace;font-size:12px;color:var(--accent);letter-spacing:1px}
-    footer{border-top:1px solid var(--border);padding:30px 40px;text-align:center;font-size:12px;color:var(--muted)}
-    footer a{color:var(--muted);margin:0 12px;text-decoration:none} footer a:hover{color:var(--ink)}
-    @media(max-width:600px){header{padding:14px 20px}.posts-grid{grid-template-columns:1fr}}
+    :root {
+      --bg: #050505;
+      --ink: #f2ede6;
+      --accent: #e8ff47;
+      --muted: #555;
+      --border: #1a1a1a;
+      --card: #0e0e0e;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Mono', monospace;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 40px;
+      background: rgba(5,5,5,0.92);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .nav-logo span { font-weight: 400; opacity: 0.5; font-size: 14px; letter-spacing: 2px; margin-left: 4px; }
+
+    .nav-right { display: flex; gap: 20px; align-items: center; }
+    .nav-right a { color: var(--muted); text-decoration: none; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; transition: color 0.15s; }
+    .nav-right a:hover { color: var(--ink); }
+
+    .btn-nav {
+      background: var(--accent);
+      color: #050505;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+
+    .btn-nav:hover { opacity: 0.85; }
+
+    /* HEADER */
+    .blog-header {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 72px 40px 48px;
+    }
+
+    .blog-eyebrow {
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .blog-header h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(36px, 5vw, 60px);
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+
+    .blog-header p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    /* CATEGORY FILTER */
+    .category-bar {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 40px 36px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .cat-btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .cat-btn:hover, .cat-btn.active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(232,255,71,0.05);
+    }
+
+    /* BLOG GRID */
+    .blog-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 40px 80px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      background: var(--border);
+    }
+
+    .post-card {
+      background: var(--bg);
+      padding: 32px 28px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.15s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .post-card:hover { background: var(--card); }
+
+    .post-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      height: 2px; width: 0;
+      background: var(--accent);
+      transition: width 0.3s;
+    }
+
+    .post-card:hover::after { width: 100%; }
+
+    .post-cat {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .post-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-bottom: 10px;
+      letter-spacing: -0.3px;
+    }
+
+    .post-excerpt {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 0.5px;
+    }
+
+    .post-meta .dot { opacity: 0.3; }
+
+    /* EMPTY STATE */
+    .empty-state {
+      grid-column: 1 / -1;
+      background: var(--bg);
+      padding: 60px 28px;
+      text-align: center;
+    }
+
+    .empty-state p { color: var(--muted); font-size: 13px; line-height: 1.7; }
+    .empty-state strong { color: var(--ink); font-family: 'Syne', sans-serif; display: block; font-size: 18px; margin-bottom: 8px; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: var(--muted);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: var(--muted); text-decoration: none; transition: color 0.15s; }
+    .footer-links a:hover { color: var(--ink); }
+
+    /* ADMIN LINK - subtle, for Decap CMS access */
+    .cms-admin {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 10px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      letter-spacing: 1px;
+      opacity: 0.4;
+      transition: opacity 0.15s;
+      z-index: 50;
+    }
+
+    .cms-admin:hover { opacity: 1; color: var(--accent); border-color: var(--accent); }
+
+    @media (max-width: 640px) {
+      nav { padding: 14px 20px; }
+      .blog-header, .category-bar, .blog-grid { padding-left: 20px; padding-right: 20px; }
+      .blog-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; text-align: center; padding: 24px 20px; }
+    }
   </style>
 </head>
 <body>
-<header>
-  <a href="/" class="logo">CLAW<span>.</span></a>
-  <a href="/app" class="cta-btn">Try Free →</a>
-</header>
-<main>
-  <div class="blog-header">
-    <div class="label">CLAW Blog</div>
-    <h1>AI Tips &<br>Guides</h1>
-    <p>0 articles on AI productivity, tools, and research.</p>
-  </div>
-  <div class="posts-grid">
 
+<nav role="navigation" aria-label="Main navigation">
+  <a href="/" class="nav-logo" aria-label="CLAW AI Home">CLAW <span>AI</span></a>
+  <div class="nav-right">
+    <a href="/#features">Features</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/blog" aria-current="page">Blog</a>
+    <a href="/app" class="btn-nav">Try Free →</a>
+  </div>
+</nav>
+
+<main>
+  <header class="blog-header">
+    <div class="blog-eyebrow">The CLAW AI Blog</div>
+    <h1>AI tips.<br>Real results.</h1>
+    <p>Tutorials, use cases, product updates, and guides to help you get more out of AI.</p>
+  </header>
+
+  <div class="category-bar" role="navigation" aria-label="Filter by category">
+    <button class="cat-btn active" onclick="filterPosts('all')">All</button>
+    <button class="cat-btn" onclick="filterPosts('ai-tips')">AI Tips</button>
+    <button class="cat-btn" onclick="filterPosts('tutorials')">Tutorials</button>
+    <button class="cat-btn" onclick="filterPosts('use-cases')">Use Cases</button>
+    <button class="cat-btn" onclick="filterPosts('comparisons')">Comparisons</button>
+    <button class="cat-btn" onclick="filterPosts('product')">Product</button>
+  </div>
+
+  <!-- Blog posts injected here by Decap CMS / static site generator -->
+  <!-- For Netlify + Decap: use a static site generator (11ty, Hugo, Jekyll) to render content/blog/*.md -->
+  <div class="blog-grid" id="blogGrid" role="list">
+    <div class="empty-state" role="listitem">
+      <strong>No posts yet</strong>
+      <p>Content will appear here once published via Decap CMS.<br>
+      Go to <code style="color:var(--accent)">/admin</code> to create your first post.</p>
+    </div>
   </div>
 </main>
-<footer>
-  <a href="/">Home</a><a href="/blog">Blog</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a>
-  <span style="margin-left:16px">© 2026 CLAW</span>
+
+<footer role="contentinfo">
+  <div>
+    <strong style="font-family:'Syne',sans-serif; color: var(--accent);">CLAW AI</strong>
+    <span style="margin-left: 12px;">© 2026 CLAW AI. All rights reserved.</span>
+  </div>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="/blog">Blog</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="mailto:support@clawai.app">Support</a>
+    <a href="https://t.me/clawaibot" target="_blank" rel="noopener">Telegram</a>
+    <a href="/sitemap.xml">Sitemap</a>
+  </nav>
 </footer>
+
+<!-- Decap CMS admin access link (hidden unless hovered) -->
+<a href="/admin" class="cms-admin" aria-label="CMS Admin">CMS</a>
+
+<script>
+  function filterPosts(cat) {
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+    // When posts are rendered, filter by data-category attribute
+    document.querySelectorAll('.post-card').forEach(card => {
+      const match = cat === 'all' || card.dataset.category === cat;
+      card.style.display = match ? 'block' : 'none';
+    });
+  }
+</script>
+
 </body>
 </html>

@@ -216,8 +216,8 @@
       background: var(--accent);
       border-radius: 50%;
       position: fixed;
-      pointer-events: none;
-      z-index: 9999;
+      pointer-events: none !important;
+      z-index: 100;
       transform: translate(-50%, -50%);
       transition: transform 0.1s, width 0.2s, height 0.2s;
       mix-blend-mode: difference;
@@ -228,8 +228,8 @@
       border: 1px solid rgba(232,255,71,0.4);
       border-radius: 50%;
       position: fixed;
-      pointer-events: none;
-      z-index: 9998;
+      pointer-events: none !important;
+      z-index: 99;
       transform: translate(-50%, -50%);
       transition: transform 0.15s ease, width 0.2s, height 0.2s;
     }
@@ -1278,13 +1278,13 @@ Want the full breakdown?</div>
 
 <!-- ── FOOTER ── -->
 <footer role="contentinfo">
-  <div>
-    <strong style="font-family:'Syne',sans-serif; color: var(--accent);">CLAW</strong>
-    <span style="margin-left: 12px;">© 2026 CLAW. All rights reserved.</span>
-    <span style="margin-left: 16px; font-size: 10px; color: #333; letter-spacing: 0.5px;">Powered by Claude AI</span>
+  <div class="footer-left">
+    <strong class="footer-brand">CLAW</strong>
+    <span class="footer-copy">© 2026 CLAW. All rights reserved.</span>
+    <span class="footer-powered">Powered by Claude AI</span>
   </div>
   <nav class="footer-links" aria-label="Footer navigation">
-    <a href="/blog" rel="noopener">Blog</a>
+    <a href="/blog">Blog</a>
     <a href="/privacy">Privacy</a>
     <a href="/terms">Terms</a>
     <a href="mailto:support@clawai.app">Support</a>
@@ -1338,10 +1338,4 @@ Want the full breakdown?</div>
   document.querySelectorAll('.faq-question').forEach(q => {
     q.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(q); }
-    });
-  });
-
-  // Intersection observer for scroll animations
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      
+    }
